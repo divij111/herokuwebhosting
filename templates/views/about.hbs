@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{>header}}
+</head>
+<body>
+  <!-- NAVBAR -->
+  {{>navbar}}
+  <!-- Main Header -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto">
+        <div class="row">
+          
+         <!-- right side div -->
+          <div class="col-md-6 col-12 main_header_right align-items-center">
+            <figure>
+                <img src="images/about.jpg" alt="shape" class="img-fluid" title="Coder's Pic">
+            </figure>
+           </div>
+          <!-- left side div -->
+           <div class="col-md-6 col-12 main_header_left">
+            <p>Welcome to Weather App</p>
+            <h1>I Am A <span class="txtcolor">Student</span> And i learn mern stack development</h1>
+            <a href="/weather" target="_blank"><button class="btn btn-success">Check My Weather App</button></a>
+          </div>
+        
+       
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+<!-- Footer Code -->
+  <footer>
+    {{>footer}}
+  </footer>
+</body>
+</html>

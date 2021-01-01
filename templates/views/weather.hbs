@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ {{>header}}
+</head>
+<body>
+  <!-- NAVBAR -->
+  {{>navbar}}
+  <!-- Main Header -->
+  <div class="container-fluid main_header">
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto">
+        <div class="main_content">
+            <form class="temp_form">
+                <input type="text" id="cityName" placeholder="Enter Your City Name" autocomplete="off">
+                <input type="submit" value="search" id="submitBtn">
+            </form>
+        </div>
+        <div class="tempInfo">
+            <div class="top_layer">
+                <p id="day">Sunday</p>
+                <p id="today_date">31 Dec</p>
+            </div>
+            <div class="main_layer">
+                <p id="city_name">Get Output Here</p>
+                <div class="middle_layer data_hide">
+                    <p id="temp"><span id="temp_real_val">0</span> <sup>o</sup>C</p>
+                    <p id="temp_status"><i class="fa fa-sun" aria-hidden="true"></i></p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Footer Code -->
+  <footer>
+    {{>footer}}
+    </footer>
+    <script src="js/main.js"></script>
+     <script>
+         const day = document.getElementById('day');
+         const d = document.getElementById('today_date');
+          function days() {
+            const no = new Array(7);
+            no[0] = "Sunday";
+            no[1] = "Monday";
+            no[2] = "Tuesday";
+            no[3] = "Wednesday";
+            no[4] = "Thursday";
+            no[5] = "Friday";
+            no[6] = "Saturday";
+            let currentTime = new Date();
+            let day = no[currentTime.getDay()];
+            return day;
+        }
+        function months(m) {
+            const no = new Array(12);
+            no[0] = "Jan";
+            no[1] = "Feb";
+            no[2] = "Mar";
+            no[3] = "Apr";
+            no[4] = "May";
+            no[5] = "June";
+            no[6] = "July";
+            no[7] = "Aug";
+            no[8] = "Sept";
+            no[9] = "Oct";
+            no[10] = "Nov";
+            no[11] = "Dec";
+            
+            return no[m];
+        }
+
+        day.innerText = days();
+         var date = new Date();
+         d.innerText =  date.getDate() + " " +months(date.getMonth());
+     </script>
+</body>
+</html>
